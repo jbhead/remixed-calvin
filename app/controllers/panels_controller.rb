@@ -1,10 +1,12 @@
 class PanelsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
+
   def new
     @panels = Panel.new
   end
 
   def create
-    Panel.create(panel_params)
+    current_user.panels.create(panel_params)
     redirect_to root_path
   end
 
