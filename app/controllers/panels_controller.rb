@@ -7,7 +7,9 @@ class PanelsController < ApplicationController
 
   def create
     @panels = current_user.panels.create(panel_params)
-    redirect_to root_path
+    redirect_to new_panel_path
+
+   
   end
 
   def show
