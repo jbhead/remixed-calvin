@@ -1,7 +1,8 @@
 class ComicsController < ApplicationController
   def index
-    @comics = Panel.all
+    @strip_panel = Panel.find(Panel.pluck(:id).sample)
   end
+
 
   def about
   end

@@ -10,6 +10,10 @@ class PanelsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @panels = Panel.find(params[:id])
+  end
+
   private
 
   def panel_params

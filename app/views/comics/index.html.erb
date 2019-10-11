@@ -4,14 +4,17 @@
   <h2 class="col-10 offset-1">C + H: Remixed</h2>
 
   <div class="booyah-box col-10 offset-1">
-    <% @comics.each do |panel| %>
-     <%= image_tag panel.image.url, class: 'img-fluid' %>
-    <% end %> 
+     <%= image_tag @strip_panel.image.url %>
+
+
+
     <br />
     <div class="float-right">
       <%= link_to 'Transmogrify!', root_path, class: 'btn btn-primary' %>
     </div>
   </div>
+
+
 </div>
 
 
