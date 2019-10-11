@@ -1,5 +1,5 @@
 class Panel < ApplicationRecord
   belongs_to :user
 
-  mount_uploader :panels, PanelUploader
+  mount_uploader :image, PanelUploader
 end
