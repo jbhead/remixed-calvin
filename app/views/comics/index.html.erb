@@ -4,19 +4,17 @@
   <h2 class="col-10 offset-1">C + H: Remixed</h2>
 
   <div class="booyah-box col-10 offset-1">
-    <%=image_tag @panel_1.image.url %>
-    <%=image_tag @panel_2.image.url %>
-    <%=image_tag @panel_3.image.url %>
-    <%=image_tag @panel_4.image.url %>
-   
 
+      <%=image_tag @panel_1.image.url, class: 'panels' %> 
+      <%=image_tag @panel_2.image.url, class: 'panels' %>
+      <%=image_tag @panel_3.image.url, class: 'panels' %>
+      <%=image_tag @panel_4.image.url, class: 'panels' %>
+      <br />
+      <div class="float-right">
+        <%= link_to 'Transmogrify!', root_path, class: 'btn btn-primary' %>
+        <%= link_to 'Add a panel', new_panel_path, class: 'btn btn-primary' %>
+      </div>
 
-
-
-    <br />
-    <div class="float-right">
-      <%= link_to 'Transmogrify!', root_path, class: 'btn btn-primary' %>
-    </div>
   </div>
 
 

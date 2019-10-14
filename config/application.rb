@@ -11,7 +11,11 @@ module RemixedCalvin
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
+    # Add the fonts path
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
+
+    # Precompile additional assets
     config.assets.precompile += %w( .svg .eot .woff .ttf )
+
   end
 end
